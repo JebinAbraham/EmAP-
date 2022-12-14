@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=euOw1DGqEpo&ab_channel=AKPython - Speach Emotion Extractor 
+https://youtu.be/-VQL8ynOdVg -> Speech Extraction Python Code
+https://github.com/PrachiSds/Data-Science/blob/main/face%20emotion%20recognition.ipynb - > Face Emotion Extractor
+https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment - > Text Emotion Extractor 
