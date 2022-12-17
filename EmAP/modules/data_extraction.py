@@ -1,6 +1,8 @@
 import os
 import subprocess
 import threading
+import warnings
+warnings.filterwarnings("ignore")
 
 def process_video(input_dir, output_dir, file_name , splitval = "5"):
     """
