@@ -1,0 +1,15 @@
+DeepFace is a deep learning-based facial recognition system developed by Facebook. It was introduced in a 2014 research paper titled "DeepFace: Closing the Gap to Human-Level Performance in Face Verification" by Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, and Lior Wolf.
+
+DeepFace is based on a convolutional neural network (CNN) architecture that was trained on a large dataset of facial images. The model was designed to be able to recognize faces with high accuracy and robustness, even in the presence of variations in lighting, pose, and facial expression.
+
+One of the key innovations of DeepFace was the use of 3D face models, which allowed the model to better handle variations in pose and lighting. The 3D face models were created using a 3D scanning system, which captured the shape and texture of a person's face in high detail.
+
+Another important aspect of DeepFace was the use of a large dataset of facial images for training. The dataset included more than 4 million images of over 4,000 individuals, making it one of the largest datasets of its kind at the time. The dataset was used to train the CNN architecture, which was then able to accurately recognize faces with a 97.35% accuracy rate.
+
+DeepFace was able to achieve a high level of accuracy by using a combination of deep learning techniques and 3D face modeling. The model was able to learn the key features of a face, such as the shape of the eyes, nose, and mouth, as well as the texture of the skin, and use this information to accurately recognize faces.
+
+Overall, DeepFace was a significant advancement in the field of facial recognition and demonstrated the potential of deep learning for this application. It has been widely cited in the research literature and has had a significant impact on the development of subsequent facial recognition systems.
+
+References:
+
+Taigman, Yaniv, et al. "DeepFace: Closing the Gap to Human-Level Performance in Face Verification." In Computer Vision and Pattern Recognition (CVPR), 2014 IEEE Conference on, pp. 1701-1708. IEEE, 2014.

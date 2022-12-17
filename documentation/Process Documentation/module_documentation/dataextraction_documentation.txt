@@ -1,0 +1,27 @@
+Overview
+This code processes a video file by splitting it into segments, extracting frames and audio from each segment, and saving the results in the output directory. The code uses the ffmpeg command-line tool to perform the video processing tasks.
+
+Requirements
+Python 3
+ffmpeg command-line tool
+Installation
+Install Python 3.
+Install the ffmpeg command-line tool. You can download it from the ffmpeg website or install it using your package manager.
+Clone or download this repository.
+Usage
+To process a video file, call the process_video function with the following arguments:
+
+input_dir: The directory containing the input video file.
+output_dir: The directory where the processed data will be saved.
+file_name: The name of the input video file.
+splitval: The time in seconds to split the video file
+The function will create a new subdirectory in the output directory with the same name as the input file (without the file extension). Inside this subdirectory, it will create the following subdirectories:
+
+splitvideo: Contains the split video segments.
+splitframes: Contains the extracted frames, organized by split video segment.
+splitaudio: Contains the extracted audio files, organized by split video segment.
+Implementation Details
+The process_video function uses the ffmpeg command to split the input video into 5 second segments and save the segments to the splitvideo subdirectory.
+The function then gets a list of the split video files and creates a separate thread for each file to extract the frames and audio in parallel. The frames are saved to the splitframes subdirectory, and the audio is saved to the splitaudio subdirectory.
+The extract_frames function uses the ffmpeg command to extract the frames from the input video file and save them to the specified output template. The output template should contain a format string (e.g. "%03d") that will be replaced with the frame number.
+The extract_audio function uses the ffmpeg command to extract the audio from the input video file and save it to the specified output file.
