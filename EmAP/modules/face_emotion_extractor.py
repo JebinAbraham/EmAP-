@@ -10,8 +10,8 @@ def detect_emotions(image_path):
 
     return emotions_list
 
-# path_ = "D:/Data/Documents/Images/Dp Compressed.jpg"
-# data = detect_emotions(path_)
+path_ = "D:/Data/Documents/Images/Dp Compressed.jpg"
+data = print(detect_emotions(path_))
 # Apply Min-Max normalization
 # min_val = min(data.values())
 # max_val = max(data.values())
