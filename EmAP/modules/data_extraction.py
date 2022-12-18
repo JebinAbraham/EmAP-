@@ -58,7 +58,9 @@ def process_video(input_dir, output_dir, file_name , splitval = "5"):
             input_file (str): The path to the input video file.
             output_file (str): The path to the output audio file.
         """
-        subprocess.run(["ffmpeg", "-i", input_file, "-vn", "-acodec", "libmp3lame", output_file])
+        #save the file as wav file
+        subprocess.run(["ffmpeg", "-i", input_file, "-vn", "-acodec", "pcm_s16le", "-ar", "44100", "-ac", "2", output_file])
+        # subprocess.run(["ffmpeg", "-i", input_file, "-vn", "-acodec", "libmp3lame", output_file])
 
     # Extract frames and audio from each split video in parallel
     threads = []
@@ -77,7 +79,7 @@ def process_video(input_dir, output_dir, file_name , splitval = "5"):
         threads.append(thread)
 
         # Extract audio in a new thread
-        outputfile = os.path.join(splitaudiosrc, i.split(".")[0] + ".mp3")
+        outputfile = os.path.join(splitaudiosrc, i.split(".")[0] + ".wav")
         thread = threading.Thread(target=extract_audio, args=(inputfile, outputfile))
         thread.start()
         threads.append(thread)
