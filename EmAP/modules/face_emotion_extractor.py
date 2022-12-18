@@ -1,5 +1,5 @@
 from deepface import DeepFace
-import numpy as np
+
 def detect_emotions(image_path):
 
     # Use the DeepFace library to detect the emotions in the image
@@ -10,25 +10,23 @@ def detect_emotions(image_path):
 
     return emotions_list
 
-path_ = "D:/Data/Documents/Images/Dp Compressed.jpg"
-data = detect_emotions(path_)
-
-
+# path_ = "D:/Data/Documents/Images/Dp Compressed.jpg"
+# data = detect_emotions(path_)
 # Apply Min-Max normalization
-min_val = min(data.values())
-max_val = max(data.values())
-normalized_data_min_max = {k: (v - min_val) / (max_val - min_val) for k, v in data.items()}
-print(normalized_data_min_max)
+# min_val = min(data.values())
+# max_val = max(data.values())
+# normalized_data_min_max = {k: (v - min_val) / (max_val - min_val) for k, v in data.items()}
+# print(normalized_data_min_max)
 
 # Apply z-score normalization
-mean = np.mean(list(data.values()))
-std = np.std(list(data.values()))
-normalized_data_z_score = {k: (v - mean) / std for k, v in data.items()}
-print(normalized_data_z_score)
+# mean = np.mean(list(data.values()))
+# std = np.std(list(data.values()))
+# normalized_data_z_score = {k: (v - mean) / std for k, v in data.items()}
+# print(normalized_data_z_score)
 
 # Apply decimal scaling
-normalized_data_decimal_scaling = {k: v / 10 for k, v in data.items()}
-print(normalized_data_decimal_scaling)
+# normalized_data_decimal_scaling = {k: v / 10 for k, v in data.items()}
+# print(normalized_data_decimal_scaling)
 
 # # Apply range normalization
 # min_val = min(data)
